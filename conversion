@@ -1,0 +1,41 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "chat",
+        "voice"
+      ]
+    },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "resolved": {
+      "type": "boolean",
+      "default": false
+    },
+    "topic": {
+      "type": "string"
+    }
+  },
+  "required": []
+}
